@@ -9,6 +9,7 @@
   --black-10: rgba(29, 30, 33, 0.10);
 }
 
+
 body {
   margin-top: 93px;
   display: flex;
@@ -24,6 +25,7 @@ body::-webkit-scrollbar {
 
 
 * {
+  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
@@ -67,11 +69,47 @@ body::-webkit-scrollbar {
   width: 23.75rem;
 }
 
+#about,#skill,#creation{
+  scroll-margin-top: 13rem;
+}
+
+.nav-bar-container div a{
+  text-decoration: none;
+  color: var(--black);
+}
+
+.nav-bar-container div {
+  transition-duration: 0.5s;
+}
+
+.nav-bar-container div:hover {
+  transform:scale(1.5);
+  opacity:1;
+  filter:blur(0);
+  text-decoration:none;
+  transition-duration: 0.5s;
+}
+
 .socials {
   display: flex;
   width: 15.5rem;
   justify-content: space-between;
   align-items: center;
+}
+
+.socials i {
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.socials i:hover {
+  transform:scale(1.2);
+  opacity:1;
+  filter:blur(0);
+  text-decoration:none;
+  transition-duration: 0.5s;
 }
 
 .github {
@@ -96,6 +134,7 @@ body::-webkit-scrollbar {
 }
 
 .h4-logo {
+  cursor:default;
   font-family: Roboto;
   font-size: 2.3125rem;
   font-style: normal;
@@ -180,6 +219,7 @@ body::-webkit-scrollbar {
 }
 
 .see-my-creations {
+  text-decoration: none;
   display: flex;
   padding: 1rem 2rem;
   align-items: center;
@@ -311,6 +351,7 @@ body::-webkit-scrollbar {
 }
 
 .image {
+  overflow: hidden;
   margin-left: 6.5rem;
   top: auto;
   bottom: 0;
@@ -322,6 +363,52 @@ body::-webkit-scrollbar {
   object-fit: cover;
 }
 
+.glass{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: translateY(120%);
+  top: auto;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 40rem;
+  flex-shrink: 0;
+  background: rgba( 255, 255, 255, 0.1 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 18.5px );
+  -webkit-backdrop-filter: blur( 18.5px );
+  transition: transform 0.5s ease-in-out;
+}
+
+.glass a {
+  margin-top: 10px;
+  margin-right: 15px;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.glass a i{
+  border-radius: 100px;
+  transition-duration: 0.3s;
+  font-size: 7rem;
+}
+
+.glass a i:hover{
+  box-shadow: 0px 0px 10px 10px var(--black-50);
+  transition-duration: 0.3s;
+}
+
+.image:hover .glass {
+  transform: translateY(0);
+}
+
+.image-2:hover .glass {
+  transform: translateY(0);
+}
+
+
 .background-2 {
   margin-right: 6.5rem;
   width: 71.3125rem;
@@ -331,6 +418,7 @@ body::-webkit-scrollbar {
 }
 
 .image-2 {
+  overflow: hidden;
   margin-left: 6.5rem;
   top: auto;
   bottom: 0;
@@ -421,6 +509,7 @@ body::-webkit-scrollbar {
 }
 
 .copyright {
+  cursor: default;
   color: var(--Black, #1D1E21);
   font-family: Roboto;
   font-size: 0.6875rem;
@@ -430,6 +519,7 @@ body::-webkit-scrollbar {
 }
 
 .terms-container {
+  cursor: default;
   display: flex;
   width: 17.1875rem;
   justify-content: space-between;
@@ -451,6 +541,22 @@ body::-webkit-scrollbar {
   justify-content: space-between;
   align-items: center;
 }
+
+.socials-footer i {
+  color: var(--black);
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.socials-footer i:hover {
+  transform:scale(1.2);
+  opacity:1;
+  filter:blur(0);
+  text-decoration:none;
+  transition-duration: 0.5s;
+}
+
 
 .github-footer {
   font-size: 2rem;

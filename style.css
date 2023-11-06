@@ -308,7 +308,8 @@ body::-webkit-scrollbar {
 
 .creations-container {
   display: flex;
-  width: 77.3125rem;
+  max-width: 77.3125rem;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   gap: 10rem;
@@ -356,7 +357,7 @@ body::-webkit-scrollbar {
   top: auto;
   bottom: 0;
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 35rem;
   flex-shrink: 0;
   background: url(image/project1.png) 50% 50% / cover no-repeat;
@@ -423,7 +424,7 @@ body::-webkit-scrollbar {
   top: auto;
   bottom: 0;
   position: absolute;
-  width: 100%;
+  width: 90%;
   height: 35rem;
   flex-shrink: 0;
   background: url(image/project2.png) 50% 50% / cover no-repeat;
@@ -440,9 +441,6 @@ body::-webkit-scrollbar {
   gap: 4.5rem;
   padding-right: 727px; /* Divide the difference by 2 or adjust as needed */
   transition: padding-right 0.3s; /* Add a transition for smooth animation */
-  @media (max-width: 1350px) {
-    padding-right: 526px; /* Adjust the padding value for smaller screens */
-  }
 }
 
 .contact {
@@ -568,4 +566,103 @@ body::-webkit-scrollbar {
 
 .instagram-footer {
   font-size: 2rem;
+}
+
+.bar {
+  display: none;
+  font-size: 0rem;
+}
+
+/*Tablet*/
+@media only screen and (max-width: 1350px) {
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  /*Font*/
+  .name,.skill-title {
+    font-size: 2.6875rem;
+  }
+
+  .h1-hero {
+    font-size: 4.75rem;
+  }
+
+  .see-my-creations div,.paragraph,.contact-paragraph, .contact-detail, .creation-paragraph {
+    font-size: 1.125rem;
+  }
+
+  .see-my-creations svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  /*Font*/
+
+  /*Header*/
+  .nav-bar-container {
+    display: none;
+  }
+
+  .right-side-container{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .socials {
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .github ,.linked-in ,.instagram {
+    font-size: 1.5rem;
+  }
+
+  .vertical-line {
+    width: 0.125rem;
+    height: 2rem;
+    background-color: var(--black-50);
+  }
+
+  .bar {
+    display: inline-block;
+    font-size: 2rem;
+  }
+  /*Header*/
+  /*skill*/
+  .skill div {
+    display: none;
+  }
+
+  .skill-container{
+    display: grid;
+    text-align: center;
+    align-items: unset;
+    justify-content: center;
+    grid-template-rows: repeat(1, 1fr); 
+  }
+
+  .skill-contain {
+    display: flex;
+    width: 50.625rem;
+    align-items: flex-start;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+  /*skill*/
+  /*creation*/
+  .creation-paragraph {
+    width: 34rem;
+  }
+  /*creation*/
+  /*contact*/
+  .contact-container {
+    padding-right: 0;
+    margin-right: auto;
+    margin-left: 20%;
+  }
+  /*contact*/
 }

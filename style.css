@@ -728,6 +728,10 @@ body::-webkit-scrollbar {
       width: 1.5rem;
       height: 1.5rem;
     }
+
+    .h4-logo {
+      font-size: 2rem;
+    }
   
   /*Font*/
   /*header*/
@@ -745,7 +749,7 @@ body::-webkit-scrollbar {
   
   .h1-hero {
     max-width: 28.5rem;
-    min-width: 20rem;
+    min-width: unset;
     height: auto;
   }
   
@@ -790,6 +794,41 @@ body::-webkit-scrollbar {
   .creation-paragraph {
     width: auto;
   }
+
+  .image-container {
+    height: 27rem;
+    align-self: stretch;
+    position: unset;
+    overflow: hidden;
+  }
+  
+  .background, .background-2 {
+    display: none;
+  }
+  
+  .image {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 20px;
+    top: unset;
+    bottom: unset;
+    position: absolute;
+    height: 27rem;
+    width: calc(100% - 4rem);
+  }
+
+  .image-2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 20px;
+    top: unset;
+    bottom: unset;
+    position: absolute;
+    height:27rem;
+    width: calc(100% - 4rem);
+  }
+  
+
   /*creations*/
   /*contact*/
   .contact-container {
@@ -820,4 +859,80 @@ body::-webkit-scrollbar {
     max-width: unset;
   }
   /*contact*/
+}
+
+@media only screen and (max-width: 450px) {
+  .h4-logo {
+    font-size: 1.4375rem;
+  }
+
+  .line {
+    width: calc(100% - 3.2rem);
+  }
+
+  .hero-container {
+    position: relative;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+    left: 0px;
+  }
+
+  .skill-contain {
+    display: grid;
+    width:auto;
+    height: 240px;
+    grid-template-columns: 120px 120px;
+    grid-row: auto auto;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+
+  .skill {
+    padding: 2rem 0rem;
+  }
+
+  .skill img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .creation-title-p-contain {
+    padding: unset;
+    width: auto;
+    margin-left: 1.8rem;
+    margin-right: 1.8rem;
+  }
+
+  .image-container {
+    height: 20rem;
+    align-self: stretch;
+    position: unset;
+    overflow: hidden;
+  }
+  
+  .background, .background-2 {
+    display: none;
+  }
+  
+  .image {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 20px;
+    top: unset;
+    bottom: unset;
+    position: absolute;
+    height: 20rem;
+    width: calc(100% - 4rem);
+  }
+
+  .image-2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 20px;
+    top: unset;
+    bottom: unset;
+    position: absolute;
+    height: 20rem;
+    width: calc(100% - 4rem);
+  }
 }
